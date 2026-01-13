@@ -2,7 +2,7 @@
 
 1. Build the docker image
 ```bash 
-docker build -f Dockerfile.masspy_fixed -t masspy .
+docker build -t masspy .
 ```
 
 2. If you want to run a jupyter notebook.
