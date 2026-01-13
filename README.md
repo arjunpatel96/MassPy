@@ -1,10 +1,10 @@
 # Instructions:
 
-1. ```bash
-docker build -f Dockerfile.masspy_fixed -t masspy
+1. Build the docker image
+```bash docker build -f Dockerfile.masspy_fixed -t masspy
 ```
-If you want to run a jupyter notebook.
-2. ```bash
+2. If you want to run a jupyter notebook.
+```bash
 docker run --rm -it \
   -p 8888:8888 \
   -v "$PWD":/work \
