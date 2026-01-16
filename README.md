@@ -8,11 +8,12 @@ docker build -t masspy .
 2. If you want to run a jupyter notebook.
 ```bash
 docker run --rm -it \
+  --entrypoint bash \
   -p 8888:8888 \
-  -v "$PWD":/work \
+  -v "$(pwd)":/work \
+  -w /work \
   masspy \
-  jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root \
-  --NotebookApp.token='' --NotebookApp.password=''
+  -lc "python3 -m notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''"
 ```
 
 3. Open http://localhost:8888
